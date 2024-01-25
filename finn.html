@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Finn</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main_grid">
+        <h1><a href="finn.com">Finn van der Wal</a></h1>
+        <!-- <div id = "voeten-animatie">
+                <input type="image" onclick="draai()" id="voeten_foto" src="voeten.jpeg">
+            </div> -->
+        <div class="lopende_voeten">
+            <input type="image" onclick="draai()" id="links" src="links.jpeg">
+            <input type="image" onclick="draai()" id="rechts" src="rechts.jpeg">
+        </div>
+
+        <script src="" async defer></script>
+        <script>
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+
+            async function draai() {
+                var rechts = document.getElementById("rechts");
+                var links = document.getElementById("links");
+                for (var i = 0; i < 10; i++) {
+                    rechts.style.transform = "scale(0.7) rotateX(50deg) translateX(100px) translateY(-300px)";
+                    await sleep(3000);
+                    rechts.style.transform = "scale(1) rotateX(0deg) translateX(0px) translateY(0px)";
+                    await sleep(3000);
+                    links.style.transform = "scale(0.7) rotateX(50deg) translateX(-100px) translateY(-300px)";
+                    await sleep(3000);
+                    links.style.transform = "scale(1) rotateX(0deg) translateX(0px) translateY(0px)";
+                    await sleep(3000);
+                }
+            }
+
+
+        </script>
+</body>
+
+</html>

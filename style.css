@@ -1,0 +1,83 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.lopende_voeten {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+
+#links{
+    transform-origin: top;
+    transition: 3s;
+}
+#rechts{
+    transform-origin: top;
+    transition: 3s;
+}
+
+#voeten-animatie {
+    width: 100%;
+    height: 100%;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+#voeten_foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 10s;
+    opacity: 1;
+    cursor: pointer;
+}
+.main_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+
+.main_grid h1 {
+
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+    justify-self: center;
+}
+ .main_grid a {
+    text-decoration: none;
+    color: white;
+ }
+
+.main_grid p {
+    color: white;
+    display: block;
+    grid-column: 4;
+    grid-row: 3;
+}
+
